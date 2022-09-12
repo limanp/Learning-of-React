@@ -1,0 +1,7 @@
+.Content {
+    grid-area: c;
+    background-color:blue;
+}
+.Item {
+  color: greenyellow;
+}
