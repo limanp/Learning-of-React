@@ -7,7 +7,7 @@ const Post = (props) => {
         <img src='https://png.pngtree.com/png-vector/20190329/ourlarge/pngtree-vector-avatar-icon-png-image_889398.jpg' />
         {props.message}
         <div>
-          <span>Like - {props.like}</span>
+          <span>Like</span> {props.likesCount}
         </div>
       </div>
     )
