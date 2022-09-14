@@ -1,16 +1,11 @@
 import React from 'react';
-import Classes from './Profile.module.css';
+import style from './Profile.module.css';
 import Posts from './MyPosts/MyPosts';
+import Profile_Info from './Profile_Info/Profile_Info'; 
 
 const Profile = () => {
-    return <div className={Classes.Content}>
-    <div>
-      <img src='https://static5.depositphotos.com/1037262/521/i/450/depositphotos_5215941-stock-photo-road-panorama.jpg' 
-      aria-hidden alt='image'/>
-    </div>
-    <div>
-      ava + description
-    </div>
+    return <div className={style.Content}>
+    <Profile_Info />
     <Posts />
   </div>
 }
