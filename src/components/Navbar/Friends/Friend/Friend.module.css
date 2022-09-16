@@ -1,0 +1,14 @@
+.content {
+    margin: 5px;
+}
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+    border-radius: 100%;
+}
+.name {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+}

@@ -1,0 +1,10 @@
+.item {
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}

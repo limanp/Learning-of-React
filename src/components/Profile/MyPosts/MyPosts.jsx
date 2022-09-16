@@ -2,9 +2,9 @@ import React from "react";
 import style from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
-const Posts = (props) => {
+const MyPosts = (props) => {
   
-  let posts = props.postData.map((p) => (
+  let posts = props.postsData.map((p) => (
     <Post message={p.message} likesCount={p.likesCount} />
   ));
 
@@ -24,4 +24,4 @@ const Posts = (props) => {
   );
 };
 
-export default Posts;
+export default MyPosts;
