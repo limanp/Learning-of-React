@@ -5,12 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state from './redux/state.js';
 import { BrowserRouter } from 'react-router-dom';
+import { addPost } from './redux/state.js';
+
+//addPost('Hello human)');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App state={state}/>
+      <App state={state} addPost={addPost}/>
     </React.StrictMode>
   </BrowserRouter>
 );
