@@ -1,18 +1,19 @@
 import React from "react";
+import state, { updateNewMessageText } from "../../redux/state";
 import style from "./Dialogs.module.css";
 import Dialog_Item from "./Dialog_Item/Dialog_Item";
 import Message_Item from "./Message_Item/Message_Item";
 
 const Dialogs = (props) => {
  
-  let dialogs = props.dialogsData.map(d => <Dialog_Item name={d.name} id={d.id} />);
-  let messages = props.messagesData.map(m => <Message_Item message={m.message} />);
+  let dialogs = props.dialogs.map(d => <Dialog_Item name={d.name} id={d.id} />);
+  let messages = props.messages.map(m => <Message_Item message={m.message} />);
 
   let newMessageElement = React.createRef();
 
-  let addMessage = () => {
+  let onMessageChange = () => {
     let text = newMessageElement.current.value;
-    alert(text);
+    updateNewMessageText(text);
   }
 
   return (
@@ -23,10 +24,10 @@ const Dialogs = (props) => {
         </div>
       <div className={style.box3}>
         <div>
-          <textarea ref={newMessageElement}></textarea>
+          <textarea onChange={onMessageChange} ref={newMessageElement} value={props.newMessageText}></textarea>
         </div>
         <div>
-          <button onClick={addMessage}>send</button>
+          <button onClick={ props.addMessage }>send</button>
         </div>
       </div>
       
