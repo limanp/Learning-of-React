@@ -26,9 +26,6 @@ let state = {
             {name: "Sasha", id: 1},
             {name: "Vika", id: 3},
             {name: "Oleg", id: 5},
-            {name: "Oleg", id: 5},
-            {name: "Oleg", id: 5},
-            {name: "Oleg", id: 5}
         ]
     }
 };
