@@ -10,11 +10,10 @@ const MyPosts = (props) => {
   
   let newPostElement = React.createRef();
 
-  //let addPost = () => {
-   // props.addPost();
+  let addPost = () => {
+    props.addPost();
     //                        alert(text);
-  //}
-
+  }
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
@@ -30,7 +29,7 @@ const MyPosts = (props) => {
           value={props.newPostText}/>
         </div>
         <div>
-          <button onClick={ props.addPost }>Send</button>
+          <button onClick={ addPost }>Send</button>
         </div>
       </div>
       <div>{posts}</div>

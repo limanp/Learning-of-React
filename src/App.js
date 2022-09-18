@@ -10,6 +10,7 @@ import Settings from './components/Settings/Settings';
 import {Route, Routes} from 'react-router-dom';
 
 const App = (props) => {
+ debugger;
   return (
       <div className='app-wrapper'>
       <Header />
@@ -17,13 +18,14 @@ const App = (props) => {
       <div className='app-wrapper-content'>
         <Routes>
           <Route path='/profile/*' element={<Profile postsData={props.state.profilePage}
-            addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>} />
+            addPost={props.addPost} updateNewPostText={props.setNewPostText}/>} />
           <Route path='/dialogs/*' element={<Dialogs 
             dialogs={props.state.dialogsPage.dialogs}
             messages={props.state.dialogsPage.messages}
             newMessageText={props.state.dialogsPage.newMessageText}
-            addMessage={props.addMessage} 
-            updateNewPostText={props.updateNewPostText}
+            setNewMessageText={props.setNewMessageText}
+            addMessage={props.addMessage}
+
             />} />
           <Route path='/music/*' element={<Music />} />
           <Route path='/settings/*' element={<Settings />} />
