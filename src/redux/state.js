@@ -1,4 +1,4 @@
-import {rerenderEntireTree} from './../render';
+
 
 let state = {
     profilePage: {
@@ -34,7 +34,7 @@ let state = {
     }
 };
 
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: 3, 
         message: state.profilePage.newPostText,
@@ -42,27 +42,32 @@ export let addPost = () => {
     };
     state.profilePage.posts.push(newPost);
     state.profilePage.newPostText = '';
-    rerenderEntireTree(state, addPost, updateNewPostText, addMessage, updateNewMessageText);
+    rerenderEntireTree(state);
 }
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
-    rerenderEntireTree(state, addPost, updateNewPostText, addMessage, updateNewMessageText);
+    rerenderEntireTree(state);
 }
 
-export let addMessage = () => {
+export const addMessage = () => {
     let newMessage = {
         message: state.dialogsPage.newMessageText, 
         id: 4
     }
     state.dialogsPage.messages.push(newMessage);
     state.dialogsPage.newMessageText = '';
-    rerenderEntireTree(state, addPost, updateNewPostText, addMessage, updateNewMessageText);
+    rerenderEntireTree(state);
 }
 
-export let updateNewMessageText = (newText) => {
+export const updateNewMessageText = (newText) => {
     state.dialogsPage.newMessageText = newText;
-    rerenderEntireTree(state, addPost, updateNewPostText, addMessage, updateNewMessageText)
+    rerenderEntireTree(state)
+}
+
+let rerenderEntireTree;
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer; // observer -- патерн / похожый на publisher-subscriber но есть отличия
 }
 
 export default state;
