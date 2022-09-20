@@ -54,7 +54,7 @@ let store = {
     this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
     this._state.navbar = navbarReducer(this._state.navbar, action);
 
-    this._callSubscriber();
+    this._callSubscriber(this._state);
   },
 };
 
