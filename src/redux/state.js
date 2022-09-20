@@ -1,7 +1,7 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-const ADD_MESSAGE = 'ADD-MESSAGE';
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+const ADD_POST = 'ADD_POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
+const ADD_MESSAGE = 'ADD_MESSAGE';
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE_NEW_MESSAGE_TEXT';
 
 let store = {
      _state: {
@@ -10,7 +10,7 @@ let store = {
                 { id: 1, message: "Hi, how are you?", likesCount: 15 },
                 { id: 2, message: "My first post.", likesCount: 20 }
               ],
-            newPostText: 'hello world!'
+            newPostText: ''
         },
         dialogsPage: {
             dialogs: [
@@ -27,7 +27,7 @@ let store = {
                 { message: "I am react developer!", id: 3 },
                 { message: "This is nice message!", id: 4 }
               ],
-            newMessageText: 'Hello world!'
+            newMessageText: ''
         },
         navbar: {
             friends: [
@@ -79,11 +79,12 @@ let store = {
 }
 
 export const addPostActionCreator = () => ({type: ADD_POST});
-export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text});
+export const updateNewPostTextActionCreator = (text) => 
+    ({type: UPDATE_NEW_POST_TEXT, newText: text});
 export const addMessageActionCreator = () => ({type: ADD_MESSAGE});
-export const updateNewMessageTextActionCreator = (text) => ({type: UPDATE_NEW_MESSAGE_TEXT, newText: text});
+export const updateNewMessageTextActionCreator = (text) => 
+    ({type: UPDATE_NEW_MESSAGE_TEXT, newText: text});
 export default store;
 
 
-// test
-// store - OOP 
+// store - OOP
