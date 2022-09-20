@@ -1,5 +1,4 @@
 import React from "react";
-import state, { updateNewMessageText } from "../../redux/state";
 import style from "./Dialogs.module.css";
 import Dialog_Item from "./Dialog_Item/Dialog_Item";
 import Message_Item from "./Message_Item/Message_Item";
