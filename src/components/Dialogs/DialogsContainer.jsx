@@ -10,6 +10,7 @@ import store from "../../redux/redux-store";
 let mapStateToProps = (state) => {
   return {
     dialogsPage: state.dialogsPage,
+    messages: state.dialogsPage.messages
   }
 }
 let mapDispatchToProps = (dispatch) => {
