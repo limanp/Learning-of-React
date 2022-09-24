@@ -1,0 +1,23 @@
+.user {
+    display: flex;
+    margin: 20px;
+}
+.avatar {
+    width: 70px;
+}
+.avatar img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+.description {
+    padding: 10px;
+    display: flex;
+    width: 500px;
+    border: 2px solid rgb(139, 139, 139);
+    border-radius: 10px;
+}
+.description :first-child{
+    width: 80%;
+}

@@ -2,14 +2,18 @@ import React from 'react';
 import style from './Navbar.module.css';
 import Friends from './Friends/Friends';
 import { NavLink } from 'react-router-dom';
+import { getAllByTitle } from '@testing-library/react';
 
 const Navbar = (props) => {
     return <nav className={ style.nav }>
     <div className={style.item}>
-      <NavLink to='/profile' className={navData => navData.isActive ? style.active : style.item} >Profile</NavLink>
+      <NavLink to='/profile' className={navData => navData.isActive ? style.active : style.item}>Profile</NavLink>
     </div>
     <div className={style.item}>
       <NavLink to='/dialogs' className={navData => navData.isActive ? style.active : style.item}>dialogs</NavLink>
+    </div>
+    <div className={style.item}>
+      <NavLink to='/users' className={navData => navData.isActive ? style.active : style.item}>Users</NavLink>
     </div>
     <div className={style.item}>
       <NavLink to='/news' className={navData => navData.isActive ? style.active : style.item}>News</NavLink>
@@ -21,7 +25,7 @@ const Navbar = (props) => {
       <NavLink to='/settings' className={navData => navData.isActive ? style.active : style.item}>Settings</NavLink>
     </div>
     <div className={style.item}>
-      <Friends friendsData={props.navbar.friends} />
+      {/*<Friends friendsData={props.navbar.friends} />*/}
     </div>
   </nav>;
 }
