@@ -21,3 +21,14 @@
 .description :first-child{
     width: 80%;
 }
+.selectedPage {
+    font-weight: bold;
+}
+.pages span {
+    margin: 10px;
+}
+.pages {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
