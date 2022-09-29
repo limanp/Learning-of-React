@@ -5,9 +5,11 @@ import userPhoto from "../../assets/images/userImage.png";
 
 class Users extends React.Component {
 
-  constructor(props) {
-    super(props);
-    alert('New');
+  //constructor(props) { -- елси синтаксис такой можно не писать 
+  //  super(props);
+  //}
+
+  componentDidMount() {
     axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
       debugger;
       this.props.setUsers(response.data.items);
