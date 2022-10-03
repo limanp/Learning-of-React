@@ -1,3 +1,8 @@
 .posts_block {
     padding: 10px;
 }
+button {
+    background-color: green;
+    border-color: yellow;
+    color: white;
+}
