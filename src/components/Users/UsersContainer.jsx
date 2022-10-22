@@ -30,14 +30,13 @@ class UsersApiComponent extends React.Component {
     
     render() {
       debugger;
-      return <Users totalUsersCount={this.props.totalUsersCount}
+      return <><Users totalUsersCount={this.props.totalUsersCount}
       pageSize={this.props.pageSize}
       currentPage={this.props.currentPage}
       users={this.props.users}
       follow={this.props.follow}
       unfollow={this.props.unfollow}
-      onPageChanged={this.onPageChanged}
-       />
+      onPageChanged={this.onPageChanged}/></>
     }
   }
 
@@ -46,7 +45,8 @@ let mapStateToProps = (state) => {
         users: state.usersPage.users,
         pageSize: state.usersPage.pageSize,
         totalUsersCount: state.usersPage.totalUsersCount,
-        currentPage: state.usersPage.currentPage
+        currentPage: state.usersPage.currentPage,
+        isFetching: state.usertsPage.isFetching
     }
 }
 let mapDispatchToProps = (dispatch) => {
