@@ -18,7 +18,20 @@ const Description = (props) => {
           />
         </div>
         <div className={style.description}>
-          <img src={props.profile.photos.large}/> + description</div>
+          <img src={props.profile.photos.large}/> <div>{props.profile.aboutMe}</div>
+          <div>{props.profile.fullName}</div>
+          <div>{props.profile.contactsS}</div>
+          <div className="contacts">
+            facebook: {props.profile.contacts.facebook}<br/>
+            website: {props.profile.contacts.website}<br/>
+            vk: {props.profile.contacts.vk}<br/>
+            twitter: {props.profile.contacts.twitter}<br/>
+            instagram: {props.profile.contacts.instagram}<br/>
+            youtube: {props.profile.contacts.youtube}<br/>
+            github: {props.profile.contacts.github}<br/>
+            mainLink: {props.profile.contacts.mainLink}<br/>
+          </div>
+        </div>
       </div>
     );
   
