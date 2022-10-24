@@ -1,3 +1,7 @@
 .description {
     padding: 10px;
 }
+
+.contacts span{
+    font-weight: bold;
+}
