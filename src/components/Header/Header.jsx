@@ -1,11 +1,16 @@
 import React from 'react';
-import Classes from './Header.module.css';
+import finalPropsSelectorFactory from 'react-redux/es/connect/selectorFactory';
+import { NavLink } from 'react-router-dom';
+import style from './Header.module.css';
 
-const Header = () => {
+const Header = (props) => {
     return (
-        <header className={Classes.header}>
+        <header className={style.header}>
             <img src='https://upload.wikimedia.org/wikipedia/commons/d/db/Zeronet_logo.png' 
             aria-hidden alt='image'/>
+            <div className={style.loginBlock}>
+                {props.isAuth ? props.login : <NavLink to={'/login'}>Login</NavLink>}
+            </div>
         </header>
     );
 }
