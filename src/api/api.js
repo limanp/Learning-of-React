@@ -1,5 +1,7 @@
 import * as axios from "axios"
 
+// Finish lesson 63
+
 const instance = axios.create({
     withCredentials: true,
     baseURL: 'https://social-network.samuraijs.com/api/1.0/',
