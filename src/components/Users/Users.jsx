@@ -31,8 +31,12 @@ let Users = (props) => {
                 </div>
               <div>
                   {u.followed
-                  ? <button onClick={() => { usersAPI.unfollowUser(u.id, props.unfollow) }}>follow</button> 
-                  : <button onClick={() => { usersAPI.followUser(u.id, props.follow) }}>unfollow</button>} 
+                  ? <button onClick={() => { 
+                    usersAPI.unfollowRequest(u.id).then(data => data.resultCode === 0 && props.ungollow(u.id))
+                  }}>follow</button> 
+                  : <button onClick={() => { 
+                    usersAPI.followRequest(u.id).then(data => data.resultCode === 0 && props.follow(u.id)) 
+                    }}>unfollow</button>} 
               </div>
           </div>
           <div className={style.description}>
